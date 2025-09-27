@@ -3,6 +3,7 @@ import Header from "./components/Header/Header";
 import Hero from './components/Hero/Hero';
 import Sphers from './components/Sphers/Sphers';
 import Stek from './components/Stek/Stek';
+import Achievements from './components/Achivments/Achivments';
 import Contacts from './components/Contacts/Contacts';
 
 const App = () => {
@@ -11,8 +12,9 @@ const App = () => {
       <Header />
       <Hero />
       <Sphers />
-      <Stek/>
-      <Contacts/>
+      <Achievements />
+      <Stek />
+      <Contacts />
     </>
   )
 }

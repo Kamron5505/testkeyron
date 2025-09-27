@@ -72,7 +72,7 @@ const Sphers = () => {
         <section className="spheres">
             <div className="container">
                 <div className="spheres__wrapper">
-                    <h2 className="spheres__title title">Работаем в сферах</h2>
+                <h2 className="spheres__title title">Работаем в сферах</h2>
 
                     <div className="spheres__pagination">
                         <div className="indicators">
