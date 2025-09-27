@@ -1,0 +1,23 @@
+.contact {}
+
+.container {}
+
+.title {}
+
+.contact__title {
+    margin-bottom: 50px;
+}
+
+.contact__form-block {}
+
+.contact-description {
+    font-weight: 700;
+    font-size: 32px;
+    color: #fff;
+}
+
+.contact-form {}
+
+.contact-form-input {}
+
+.contact-form-button {}

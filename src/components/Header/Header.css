@@ -1,0 +1,162 @@
+.header {
+    margin-top: 60px;
+}
+
+
+.header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.logo__text {
+    font-family: var(--font-family);
+    font-weight: 900;
+    font-size: 32px;
+    color: #eb3d47;
+}
+
+
+.nav__list {
+    display: flex;
+    gap: 30px;
+}
+
+.nav__link {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    text-align: center;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.nav__link:hover {
+    color: #eb3d47;
+}
+
+.nav__link:active {
+    color: #c52a33;
+}
+
+.header__socials {
+    display: flex;
+    gap: 15px;
+}
+
+.social__link {
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.social__link:hover {
+    background-color: #eb3d47;
+}
+
+.social__link:active {
+    background-color: #c52a33;
+    transform: scale(0.95);
+}
+
+
+.icon {
+    width: 15px;
+    height: 15px;
+}
+
+/* Бургер */
+.burger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.burger span {
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    border-radius: 2px;
+}
+
+/* Показываем бургер на планшетах и ниже */
+@media (max-width: 1024px) {
+    .burger {
+        display: flex;
+    }
+
+    .logo__text {
+        display: none;
+    }
+
+    .nav__list {
+        display: none;
+    }
+
+    .header__socials {
+        display: none;
+    }
+}
+
+.modal {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal__content {
+    border-radius: 12px;
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+    animation: fadeIn 0.3s ease;
+}
+
+.modal__close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    color: #fff;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.modal__list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.modal__link {
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.modal__link:hover {
+    color: #eb3d47;
+}
+
+@keyframes fadeIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
