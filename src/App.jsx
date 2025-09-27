@@ -4,6 +4,7 @@ import Hero from './components/Hero/Hero';
 import Sphers from './components/Sphers/Sphers';
 import Stek from './components/Stek/Stek';
 import Achievements from './components/Achivments/Achivments';
+import Portfolio from './components/Portfolio/Portfolio'
 import Contacts from './components/Contacts/Contacts';
 
 const App = () => {
@@ -14,6 +15,7 @@ const App = () => {
       <Sphers />
       <Achievements />
       <Stek />
+      <Portfolio />
       <Contacts />
     </>
   )
