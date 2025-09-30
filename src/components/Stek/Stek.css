@@ -121,3 +121,30 @@
     color: #fff;
 }
 
+.steks__title {
+    margin-bottom: 50px;
+}
+
+@media (max-width:480px) {
+    .steks__title {
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+
+    .card img {
+        display: none;
+    }
+
+    .stack__grid {
+        flex-direction: column;
+    }
+
+    .stack__tabs {
+        display: none;
+    }
+
+    .card {
+        padding: 15px 0;
+        border-radius: 18px;
+    }
+}

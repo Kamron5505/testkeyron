@@ -12,7 +12,7 @@ const Stek = () => {
     return (
         <section id='stek' className="stack">
             <div className="container stack__container">
-                <h2 className=" sphers__title title">НАШ СТЕК</h2>
+                <h2 className=" steks__title title">НАШ СТЕК</h2>
 
                 <div className="stack__tabs">
                     <a href="#" className="stack__tab-item stack__tab-item--active">Веб-разработка</a>
