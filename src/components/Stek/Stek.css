@@ -6,7 +6,6 @@
     justify-content: center;
 }
 
-
 .sphers__title {
     margin-bottom: 50px;
 }
@@ -67,7 +66,6 @@
     justify-content: center;
 }
 
-
 .card {
     display: flex;
     flex-direction: column;
@@ -123,51 +121,3 @@
     color: #fff;
 }
 
-@media (max-width: 1024px) {
-    .stack__grid {
-        width: 100%;
-        gap: 20px;
-        justify-content: center;
-    }
-
-    .stack__tab-item {
-        padding: 10px 25px;
-        font-size: 14px;
-    }
-
-    .card {
-        width: 45%;
-    }
-}
-
-@media (max-width: 768px) {
-    .stack {
-        padding: 80px 20px;
-    }
-
-    .stack__tabs {
-        display: none;
-    }
-
-    .stack__grid {
-        flex-direction: column;
-        width: 100%;
-        gap: 20px;
-        margin: auto;
-        display: flex;
-    }
-
-    .card {
-        padding: 15px 0;
-        width: 303px;
-        border-radius: 18px;
-    }
-
-    .card__name {
-        font-size: 19px;
-    }
-
-    .card__logo img {
-        display: none;
-    }
-}

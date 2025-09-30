@@ -26,12 +26,14 @@
 
 .benefits__container {
     display: grid;
-    gap: 1.5rem;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    max-width: 700px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 40px;
+    max-width: 580px;
     width: 100%;
-    margin: 40px 0 95px;
+    margin-bottom: 90px;
 }
+
 
 .benefit__item {
     display: flex;
@@ -39,13 +41,33 @@
     gap: 20px;
     font-weight: 400;
     color: #fff;
-    padding: 13px 40px 13px 30px;
     border-radius: 30px;
     background: rgba(255, 255, 255, 0.1);
-    min-width: 238px;
-    max-width: 305px;
     white-space: nowrap;
-    /* заменил text-wrap */
+}
+
+.benefit__item:nth-child(1) {
+    max-width: 255px;
+    width: 100%;
+    padding: 10px 40px 10px 30px;
+}
+
+.benefit__item:nth-child(2) {
+    max-width: 305px;
+    width: 100%;
+    padding: 10px 30px;
+}
+
+.benefit__item:nth-child(3) {
+    max-width: 272px;
+    width: 100%;
+    padding: 10px 31px 10px 23px;
+}
+
+.benefit__item:nth-child(4) {
+    max-width: 238px;
+    width: 100%;
+    padding: 10px 31px;
 }
 
 .benefit__title {
@@ -74,69 +96,48 @@
     transform: scale(0.97);
 }
 
-/* Планшеты */
-@media (max-width: 1024px) {
-    .hero__title {
-        font-size: 120px;
-    }
-
-    .hero__desc {
-        font-size: 18px;
-        max-width: 600px;
-    }
-}
-
-@media (max-width: 768px) {
-    .hero__title {
-        font-size: 90px;
-    }
-
-    .hero__desc {
-        font-size: 16px;
-        max-width: 450px;
-        line-height: 1.5;
-    }
-
-    .hero__btn {
-        width: 220px;
-        font-size: 16px;
-    }
-}
-
-/* Маленькие смартфоны */
-@media (max-width: 480px) {
+@media (max-width:480px) {
     .hero__title {
         font-size: 64px;
+        text-align: center;
     }
 
     .hero__desc {
-        font-size: 1rem;
-        line-height: 1.7;
-        max-width: 100%;
-    }
-
-    .hero__btn {
-        width: 190px;
-        font-size: 14px;
-        padding: 12px 30px;
-        margin-top: 40px;
+        width: 282px;
+        font-size: 16px;
     }
 
     .benefit__title {
         font-size: 12px;
     }
 
+
+    .benefit__item:nth-child(1) {
+        max-width: 166px;
+        width: 100%;
+        padding: 10px 20px;
+    }
+
+    .benefit__item:nth-child(2) {
+        max-width: 211px;
+        width: 100%;
+        padding: 7px 20px;
+    }
+
+    .benefit__item:nth-child(3) {
+        width: 100%;
+        max-width: 194px;
+        padding: 8px 20px;
+    }
+
+    .benefit__item:nth-child(4) {
+        width: 100%;
+        max-width: 160px;
+        padding: 10px 20px;
+    }
+
     .benefits__container {
         display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
+        flex-direction: column;
     }
-
-    .hero__btn {
-        font-size: 14px;
-        padding: 9px 30px;
-
-    }
-
-
 }

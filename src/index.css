@@ -46,8 +46,8 @@ a {
 }
 
 .live-indicator {
-  width: 24px;
-  height: 24px;
+  width: clamp(12px, 3vw, 24px);
+  height: clamp(12px, 3vw, 24px);
   border-radius: 50%;
   background-color: #991b1b;
   display: flex;
@@ -59,8 +59,8 @@ a {
 
 .live-indicator::after {
   content: "";
-  width: 14px;
-  height: 14px;
+  width: 60%;
+  height: 60%;
   border-radius: 50%;
   background-color: #f87171;
 }

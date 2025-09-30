@@ -23,7 +23,8 @@
 }
 
 .partners__card {
-    max-width: 1138px;
+    width: 100%;
+    max-width: none;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -31,6 +32,7 @@
     border-radius: 30px;
     background: rgba(255, 255, 255, 0.1);
 }
+
 
 .partners__card-title {
     font-weight: 500;
@@ -58,10 +60,3 @@
     border: none;
 }
 
-.partners__card-button {}
-
-@media (max-width: 768px) {
-    .partners__card {}
-
-    .partners__card-description {}
-}

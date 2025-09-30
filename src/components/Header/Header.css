@@ -86,56 +86,53 @@
     border-radius: 2px;
 }
 
-/* Показываем бургер на планшетах и ниже */
-@media (max-width: 1024px) {
-    .burger {
-        display: flex;
-    }
-
-    .logo__text {
-        display: none;
-    }
-
-    .nav__list {
-        display: none;
-    }
-
-    .header__socials {
-        display: none;
-    }
-}
-
 .modal {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 .modal__content {
+    background-color: #13151C;
     border-radius: 12px;
     width: 90%;
     max-width: 400px;
-    position: relative;
     animation: fadeIn 0.3s ease;
+    position: absolute;
+    top: 0;
+    margin-top: 20px;
+    padding-bottom: 190px;
 }
 
 .modal__close {
     position: absolute;
     top: 10px;
     right: 15px;
-    font-size: 24px;
-    color: #fff;
     background: none;
     border: none;
     cursor: pointer;
 }
 
+.modal__title {
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: -0.02em;
+    color: #fff;
+}
+
+.modal__socials {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
 .modal__list {
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    margin-top: 20px;
+    gap: 25px;
+    margin-top: 60px;
 }
 
 .modal__link {
@@ -149,14 +146,20 @@
     color: #eb3d47;
 }
 
-@keyframes fadeIn {
-    from {
-        transform: translateY(-20px);
-        opacity: 0;
+@media (max-width: 480px) {
+
+    .logo,
+    .nav,
+    .header__socials {
+        display: none;
     }
 
-    to {
-        transform: translateY(0);
-        opacity: 1;
+    .burger {
+        display: block;
+    }
+
+    .header__container {
+        display: flex;
+        justify-content: flex-end;
     }
 }

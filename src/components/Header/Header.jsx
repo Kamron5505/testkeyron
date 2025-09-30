@@ -5,6 +5,7 @@ import facebookIcon from "../../assets/icons/linked.svg";
 import instagramIcon from "../../assets/icons/instagram.svg";
 import telegramIcon from "../../assets/icons/telegram.svg";
 import burgerIcon from "../../assets/icons/burger.svg";
+import closeIcon from "../../assets/icons/close-btn.svg";
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -49,7 +50,10 @@ const Header = () => {
             {isOpen && (
                 <div className="modal" onClick={toggleMenu}>
                     <div className="modal__content" onClick={(e) => e.stopPropagation()}>
-                        <button className="modal__close" onClick={toggleMenu}>×</button>
+                        <h3 className="modal__title">Меню</h3>
+                        <button className="modal__close" onClick={toggleMenu}>
+                            <img src={closeIcon} alt="" />
+                        </button>
                         <ul className="modal__list">
                             <li><a href="#" className="modal__link">Сферы</a></li>
                             <li><a href="#" className="modal__link">Достижения</a></li>
@@ -57,6 +61,17 @@ const Header = () => {
                             <li><a href="#" className="modal__link">Партнерство</a></li>
                             <li><a href="#" className="modal__link">FAQ</a></li>
                         </ul>
+                        <div className="modal__socials">
+                            <a href="#" className="social__link">
+                                <img className="icon" src={facebookIcon} alt="Facebook" />
+                            </a>
+                            <a href="#" className="social__link">
+                                <img className="icon" src={instagramIcon} alt="Instagram" />
+                            </a>
+                            <a href="#" className="social__link">
+                                <img className="icon" src={telegramIcon} alt="Telegram" />
+                            </a>
+                        </div>
                     </div>
                 </div>
             )}

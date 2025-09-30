@@ -64,10 +64,3 @@
     border-radius: 100px;
     cursor: pointer;
 }
-
-/* ================= Адаптив ================= */
-@media (max-width: 700px) {
-    .portfolio__card-image {
-        display: none;
-    }
-}
