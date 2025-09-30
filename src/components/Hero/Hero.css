@@ -101,6 +101,10 @@
 }
 
 @media (max-width:480px) {
+    .hero {
+        padding: 90px 0;
+    }
+
     .hero__title {
         font-size: 64px;
     }

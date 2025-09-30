@@ -1,5 +1,5 @@
 .achievements-section {
-    padding: 40px 20px;
+    padding: 120px 0;
     color: #fff;
     line-height: 1.2;
     font-family: "Montserrat", sans-serif;
@@ -101,6 +101,9 @@
         font-size: 20px;
     }
 
+    .achievements-section {
+        padding: 60px 0;
+    }
 
     .achievements__wrapper {
         display: flex;

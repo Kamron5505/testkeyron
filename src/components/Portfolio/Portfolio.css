@@ -57,10 +57,15 @@
 }
 
 .portfolio__card-title {
-    font-size: 20px;
+    font-weight: 500;
+    font-size: 28px;
+    color: #fff;
 }
 
 .portfolio__card-text {
+    font-weight: 500;
+    font-size: 18px;
+    color: #fff;
     margin: 25px 0;
 }
 
@@ -84,8 +89,6 @@
         font-size: 20px;
         text-align: center;
     }
-
- 
 
     .portfolio__wrapper {
         display: flex;
@@ -126,5 +129,14 @@
     .indicators div {
         width: 12px;
         height: 12px;
+    }
+
+    .portfolio__card-title {
+        font-size: 16px;
+    }
+
+    .portfolio__card-text {
+        width: 155px;
+        font-size: 12px;
     }
 }

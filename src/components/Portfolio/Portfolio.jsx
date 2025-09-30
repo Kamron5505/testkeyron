@@ -11,10 +11,29 @@ function PortfolioSection() {
 
     const headings = [
         "Веб-разработка",
-        "Мобильная разработка ",
+        "Мобильная разработка",
         "Декстоп-разработка",
         "Телеграм-боты"
     ]
+
+    const cards = [
+        {
+            title: "Трекинг система для баеров",
+            text: "Система аналитики трафика для баеров"
+        },
+        {
+            title: "Беттинг оффер",
+            text: "Разработка беттинг-оффера под Индию"
+        },
+        {
+            title: "Разработка блога на WP",
+            text: "Блог на WordPress для адбитражного медиа"
+        },
+        {
+            title: "Партнерская программа",
+            text: "Разработка ПП под инхаус офферы команды"
+        }
+    ];
 
     const goToSlide = (index) => {
         setActiveIndex(index)
@@ -60,23 +79,23 @@ function PortfolioSection() {
                             />
                         </div>
                     </div>
-
                 </div>
+
                 <h2 key={activeIndex} className="portfolio__subtitle fade">
                     {headings[activeIndex]}
                 </h2>
+
                 <div className="portfolio__list">
-                    {[...Array(4)].map((_, i) => (
+                    {cards.map((card, i) => (
                         <div key={i} className='portfolio__card'>
                             <div className='portfolio__card-image'></div>
-                            <h2 className='portfolio__card-title'>Трекинг система для баеров</h2>
-                            <p className='portfolio__card-text'>Система аналитики трафика для баеров</p>
+                            <h2 className='portfolio__card-title'>{card.title}</h2>
+                            <p className='portfolio__card-text'>{card.text}</p>
                             <button className='portfolio__card-btn'>Сделать похожий проект</button>
                         </div>
                     ))}
                 </div>
             </div>
-
         </section>
     )
 }
