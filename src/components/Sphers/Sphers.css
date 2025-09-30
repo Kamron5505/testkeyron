@@ -4,6 +4,7 @@
 
 .spheres__wrapper {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 50px;
@@ -54,7 +55,6 @@
     display: flex;
     gap: 20px;
     align-items: center;
-    margin-left: 35px;
 }
 
 .arrow-buttons {
@@ -82,4 +82,54 @@
 
 .swiper {
     width: 100%;
+}
+
+@media (max-width:480px) {
+    .spheres__title {
+        text-wrap: nowrap;
+        font-size: 20px;
+    }
+
+    .spheres__card {
+        width: 100%;
+        text-align: left;
+        background-image: url("../../assets/icons/item-mobile.svg");
+        background-position: right;
+        max-width: 303px;
+        padding: 50px 20px;
+    }
+
+    .spheres__card-title {
+        font-size: 24px;
+    }
+
+    .spheres__card-text {
+        width: 208px;
+        font-size: 14px;
+    }
+
+    .spheres__pagination {
+        font-size: 8px;
+        flex-direction: row-reverse;
+        /* border: 1px solid red; */
+        margin-top: 20px;
+        gap: 30px;
+    }
+    .indicators{
+        gap: 13px;
+    }
+    .indicators div{
+        border: 1px solid red;
+        width: 6px;
+        height: 6px;
+    }
+
+    .arrow {
+        width: 50px;
+        height: 28px;
+    }
+
+    .arrow-buttons {
+        gap: 6px;
+    }
 }
