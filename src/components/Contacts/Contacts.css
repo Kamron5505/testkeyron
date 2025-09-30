@@ -19,20 +19,7 @@
     margin: 0 auto;
 }
 
-
-.portfolio__wrapper {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 50px;
-    margin-bottom: 55px;
-}
-
-.portfolio__heading {
-    font-weight: 600;
-    font-size: 32px;
-    color: #fff;
-}
-
+    
 .fade {
     opacity: 0;
     transform: translateY(10px);

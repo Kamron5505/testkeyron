@@ -73,7 +73,6 @@ const Sphers = () => {
             <div className="container">
                 <div className="spheres__wrapper">
                     <h2 className="spheres__title title">Работаем в сферах</h2>
-
                     <div className="spheres__pagination">
                         <div className="indicators">
                             {Array.from({ length: indicatorsCount }).map((_, i) => (
@@ -87,11 +86,9 @@ const Sphers = () => {
                         <div className="arrow-buttons">
                             <img ref={prevRef} className="arrow" src={arrowLeft} alt="prev" />
                             <img ref={nextRef} className="arrow" src={arrowRight} alt="next" />
-
                         </div>
                     </div>
                 </div>
-
                 <Swiper
                     modules={[Navigation]}
                     spaceBetween={30}

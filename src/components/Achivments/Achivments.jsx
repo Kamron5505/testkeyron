@@ -1,5 +1,10 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import './Achivments.css';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import { Navigation } from 'swiper/modules';
+
 import arrowLeft from '../../assets/icons/arrow-left.svg';
 import arrowRight from '../../assets/icons/arrow-right.svg';
 
@@ -18,7 +23,7 @@ const AchievementItem = ({ title, description, isLarge = false }) => {
 
 const AchievementsClean = () => {
     const achievements = [
-        { title: '520', description: 'лет опыта в сумме у всех разработчиков', isLarge: true },
+        { title: '520', description: 'лет опыта у всех разработчиков', isLarge: true },
         { title: 'x20', description: 'рост за последние 2 года', isLarge: true },
         { title: '250+', description: 'успешных проектов', isLarge: false },
         { title: '150', description: 'специалистов в команде', isLarge: false },
@@ -30,20 +35,32 @@ const AchievementsClean = () => {
     const swiperRef = useRef(null);
     const [activeIndex, setActiveIndex] = useState(0);
 
-    const indicatorsCount = 4;
+    useEffect(() => {
+        if (swiperRef.current && swiperRef.current.params) {
+            swiperRef.current.params.navigation.prevEl = prevRef.current;
+            swiperRef.current.params.navigation.nextEl = nextRef.current;
+            swiperRef.current.navigation.init();
+            swiperRef.current.navigation.update();
 
-    const goToSlide = (i) => {
-        setActiveIndex(i);
+            swiperRef.current.on('slideChange', () => {
+                setActiveIndex(swiperRef.current.realIndex);
+            });
+        }
+    }, []);
+
+    const goToSlide = (index) => {
+        if (swiperRef.current) swiperRef.current.slideToLoop(index);
     };
 
     return (
-        <section id="achivments" className="achievements-section">
+        <section className="achievements-section">
             <div className="container">
-                <div className="spheres__wrapper">
-                    <h2 className="achievements-section__header title">НАШИ ДОСТИЖЕНИЯ</h2>
-                    <div className="spheres__pagination">
+                <div className="achievements__wrapper">
+                    <h2 className="achievements__title title">НАШИ ДОСТИЖЕНИЯ</h2>
+
+                    <div className="achievements__pagination">
                         <div className="indicators">
-                            {Array.from({ length: indicatorsCount }).map((_, i) => (
+                            {achievements.map((_, i) => (
                                 <div
                                     key={i}
                                     className={`live-pagination ${i === activeIndex ? 'active' : ''}`}
@@ -56,16 +73,26 @@ const AchievementsClean = () => {
                             <img ref={nextRef} className="arrow" src={arrowRight} alt="next" />
                         </div>
                     </div>
+
+                    <Swiper
+                        modules={[Navigation]}
+                        spaceBetween={20}
+                        slidesPerView={1}
+                        loop={true}
+                        onSwiper={(swiper) => (swiperRef.current = swiper)}
+                    >
+                        {achievements.map((item, index) => (
+                            <SwiperSlide key={index}>
+                                <AchievementItem {...item} />
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
                 </div>
 
+                {/* ПК-сетка */}
                 <div className="achievements-section__grid">
                     {achievements.map((item, index) => (
-                        <AchievementItem
-                            key={index}
-                            title={item.title}
-                            description={item.description}
-                            isLarge={item.isLarge}
-                        />
+                        <AchievementItem key={index} {...item} />
                     ))}
                 </div>
             </div>
