@@ -88,6 +88,10 @@
     transition: background 0.3s, transform 0.2s;
 }
 
+.small-indicator {
+    display: none;
+}
+
 .hero__btn:hover {
     background: #d7353f;
 }
@@ -99,7 +103,6 @@
 @media (max-width:480px) {
     .hero__title {
         font-size: 64px;
-        text-align: center;
     }
 
     .hero__desc {
@@ -110,7 +113,6 @@
     .benefit__title {
         font-size: 12px;
     }
-
 
     .benefit__item:nth-child(1) {
         max-width: 166px;
@@ -139,5 +141,20 @@
     .benefits__container {
         display: flex;
         flex-direction: column;
+        margin-bottom: 40px;
+    }
+
+    .indicator {
+        display: none;
+    }
+
+    .small-indicator {
+        display: block;
+    }
+
+    .hero__btn {
+        font-size: 14px;
+        padding: 10px 30px;
+
     }
 }

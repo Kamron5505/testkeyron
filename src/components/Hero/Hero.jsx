@@ -1,5 +1,7 @@
 import React from 'react'
 import "./Hero.css"
+import indicator from "../../assets/icons/indicator.svg"
+import small from "../../assets/icons/indicator-small.svg"
 const Hero = () => {
     return (
         <>
@@ -13,19 +15,23 @@ const Hero = () => {
 
                         <div className="benefits__container">
                             <div className="benefit__item">
-                                <div class="live-indicator"></div>
+                                <img className='indicator' src={indicator} alt="indicator" />
+                                <img className='small-indicator' src={small} alt="indicator-small" />
                                 <h4 className="benefit__title">Веб-разработка</h4>
                             </div>
                             <div className="benefit__item">
-                                <div class="live-indicator"></div>
+                                <img className='indicator' src={indicator} alt="indicator" />
+                                <img className='small-indicator' src={small} alt="indicator-small" />
                                 <h4 className="benefit__title">Мобильная разработка </h4>
                             </div>
                             <div className="benefit__item">
-                                <div class="live-indicator"></div>
+                                <img className='indicator' src={indicator} alt="indicator" />
+                                <img className='small-indicator' src={small} alt="indicator-small" />
                                 <h4 className="benefit__title">Декстоп-разработка</h4>
                             </div>
                             <div className="benefit__item">
-                                <div class="live-indicator"></div>
+                                <img className='indicator' src={indicator} alt="indicator" />
+                                <img className='small-indicator' src={small} alt="indicator-small" />
                                 <h4 className="benefit__title">Телеграм-боты</h4>
                             </div>
                         </div>
