@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import './Achivments.css';
+import arrowLeft from '../../assets/icons/arrow-left.svg';
+import arrowRight from '../../assets/icons/arrow-right.svg';
 
 const AchievementItem = ({ title, description, isLarge = false }) => {
-    const className = isLarge ? 'achievement-item achievement-item--large' : 'achievement-item';
+    const className = isLarge
+        ? 'achievement-item achievement-item--large'
+        : 'achievement-item';
 
     return (
         <article className={className}>
@@ -21,12 +25,38 @@ const AchievementsClean = () => {
         { title: '23', description: 'новых клиента за последний год', isLarge: false },
     ];
 
+    const prevRef = useRef(null);
+    const nextRef = useRef(null);
+    const swiperRef = useRef(null);
+    const [activeIndex, setActiveIndex] = useState(0);
+
+    const indicatorsCount = 4;
+
+    const goToSlide = (i) => {
+        setActiveIndex(i);
+    };
+
     return (
-        <section id='achivments' className="achievements-section">
+        <section id="achivments" className="achievements-section">
             <div className="container">
-                <h2 className="achievements-section__header title">
-                    НАШИ ДОСТИЖЕНИЯ
-                </h2>
+                <div className="spheres__wrapper">
+                    <h2 className="achievements-section__header title">НАШИ ДОСТИЖЕНИЯ</h2>
+                    <div className="spheres__pagination">
+                        <div className="indicators">
+                            {Array.from({ length: indicatorsCount }).map((_, i) => (
+                                <div
+                                    key={i}
+                                    className={`live-pagination ${i === activeIndex ? 'active' : ''}`}
+                                    onClick={() => goToSlide(i)}
+                                ></div>
+                            ))}
+                        </div>
+                        <div className="arrow-buttons">
+                            <img ref={prevRef} className="arrow" src={arrowLeft} alt="prev" />
+                            <img ref={nextRef} className="arrow" src={arrowRight} alt="next" />
+                        </div>
+                    </div>
+                </div>
 
                 <div className="achievements-section__grid">
                     {achievements.map((item, index) => (

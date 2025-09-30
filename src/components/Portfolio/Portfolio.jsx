@@ -31,13 +31,9 @@ function PortfolioSection() {
     return (
         <section className='portfolio'>
             <div className="container">
-                <h2 className='portfolio__title'>ПОРТФОЛИО</h2>
                 <div className="portfolio__wrapper">
-                    <h2 key={activeIndex} className="portfolio__heading fade">
-                        {headings[activeIndex]}
-                    </h2>
-
-                    <div className="spheres__pagination">
+                    <h2 className='portfolio__title'>ПОРТФОЛИО</h2>
+                    <div className="portfolio__pagination">
                         <div className="indicators">
                             {Array.from({ length: indicatorsCount }).map((_, i) => (
                                 <div
@@ -64,8 +60,11 @@ function PortfolioSection() {
                             />
                         </div>
                     </div>
-                </div>
 
+                </div>
+                <h2 key={activeIndex} className="portfolio__subtitle fade">
+                    {headings[activeIndex]}
+                </h2>
                 <div className="portfolio__list">
                     {[...Array(4)].map((_, i) => (
                         <div key={i} className='portfolio__card'>

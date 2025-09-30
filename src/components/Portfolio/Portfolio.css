@@ -10,18 +10,25 @@
     text-transform: uppercase;
 }
 
-.portfolio__nav {
-    width: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 50px 0;
-    flex-wrap: wrap;
-    color: white;
+.portfolio__subtitle {
+    font-weight: 600;
+    font-size: 32px;
+    color: #fff;
 }
 
-.portfolio__nav-title {
-    font-size: 32px;
+.portfolio__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.portfolio__pagination {
+    display: flex;
+    gap: 35px;
+}
+
+.portfolio__subtitle {
+    margin-bottom: 55px;
 }
 
 .portfolio__list {
@@ -31,8 +38,8 @@
 }
 
 .portfolio__card {
-    width: 100%;
-    max-width: 554px;
+    flex: 1 1 calc(50% - 30px);
+    box-sizing: border-box;
     padding: 40px 30px;
     border-radius: 30px;
     color: white;
@@ -63,4 +70,60 @@
     border: none;
     border-radius: 100px;
     cursor: pointer;
+}
+
+
+/* ==== Мобилка (до 480px) ==== */
+@media (max-width:480px) {
+    .portfolio__title {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .portfolio__wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .portfolio__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .portfolio__subtitle {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .portfolio__pagination {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+        gap: 30px;
+        font-size: 8px;
+    }
+
+    .arrow-buttons {
+        display: flex;
+        gap: 10px;
+    }
+
+    .arrow {
+        width: 50px;
+        height: 28px;
+    }
+
+    .indicators {
+        display: flex;
+        gap: 15px;
+    }
+
+    .indicators div {
+        width: 12px;
+        height: 12px;
+    }
 }

@@ -97,6 +97,7 @@
         background-position: right;
         max-width: 303px;
         padding: 50px 20px;
+        margin: auto;
     }
 
     .spheres__card-title {
@@ -115,10 +116,12 @@
         margin-top: 20px;
         gap: 30px;
     }
-    .indicators{
+
+    .indicators {
         gap: 13px;
     }
-    .indicators div{
+
+    .indicators div {
         border: 1px solid red;
         width: 6px;
         height: 6px;

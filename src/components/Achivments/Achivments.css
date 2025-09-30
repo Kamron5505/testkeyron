@@ -86,3 +86,18 @@
 .achievements-section__grid .achievement-item:nth-child(5) .achievement-item__title {
     font-size: 64px;
 }
+
+.spheres__wrapper {
+    display: none;
+}
+
+@media (max-width:480px) {
+    .achievements-section__header {
+        font-size: 20px;
+    }
+
+    .spheres__wrapper {
+        display: block;
+    }
+    
+}
