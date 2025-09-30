@@ -97,7 +97,6 @@ const AchievementsClean = () => {
                 </div>
             </div>
         </section>
-    );
-};
-
+    );;
+}
 export default AchievementsClean;
