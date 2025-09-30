@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react'
 import './Portfolio.css'
 import arrowLeft from '../../assets/icons/arrow-left.svg'
 import arrowRight from '../../assets/icons/arrow-right.svg'
-
+import cardBg from './../../assets/card-bg.png';
 function PortfolioSection() {
     const [activeIndex, setActiveIndex] = useState(0)
     const indicatorsCount = 4
@@ -88,7 +88,9 @@ function PortfolioSection() {
                 <div className="portfolio__list">
                     {cards.map((card, i) => (
                         <div key={i} className='portfolio__card'>
-                            <div className='portfolio__card-image'></div>
+                            <div className='portfolio__card-image'>
+                                <img src={cardBg} alt="" />
+                            </div>
                             <h2 className='portfolio__card-title'>{card.title}</h2>
                             <p className='portfolio__card-text'>{card.text}</p>
                             <button className='portfolio__card-btn'>Сделать похожий проект</button>
