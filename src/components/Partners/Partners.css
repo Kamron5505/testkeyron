@@ -1,0 +1,67 @@
+.partners {
+    padding: 120px 0;
+    font-family: "Montserrat", sans-serif
+}
+
+.partners__title {
+    margin-bottom: 50px;
+}
+
+.partners__subtitle {
+    font-weight: 600;
+    font-size: 32px;
+    color: #fff;
+    width: 966px;
+    margin-bottom: 30px;
+}
+
+.partners__list {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.partners__card {
+    max-width: 1138px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 70px;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.partners__card-title {
+    font-weight: 500;
+    font-size: 28px;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.partners__card-description {
+    width: 692px;
+    font-weight: 500;
+    font-size: 18px;
+    color: #fff;
+}
+
+.partners__card-button {
+    font-weight: 500;
+    font-size: 14px;
+    text-align: center;
+    color: #fff;
+    padding: 10px 35px;
+    border-radius: 100px;
+    width: 227px;
+    background: #eb3d47;
+    border: none;
+}
+
+.partners__card-button {}
+
+@media (max-width: 768px) {
+    .partners__card {}
+
+    .partners__card-description {}
+}

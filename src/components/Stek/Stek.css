@@ -1,6 +1,11 @@
 .stack {
     padding: 120px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
+
 
 .sphers__title {
     margin-bottom: 50px;
@@ -12,6 +17,23 @@
     gap: 30px;
     margin-bottom: 50px;
     flex-wrap: wrap;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 31px;
+    width: 360px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.15);
 }
 
 .stack__tab-item {
@@ -44,6 +66,7 @@
     width: 1164px;
     justify-content: center;
 }
+
 
 .card {
     display: flex;

@@ -22,7 +22,7 @@ const AchievementsClean = () => {
     ];
 
     return (
-        <section className="achievements-section">
+        <section id='achivments' className="achievements-section">
             <div className="container">
                 <h2 className="achievements-section__header title">
                     НАШИ ДОСТИЖЕНИЯ

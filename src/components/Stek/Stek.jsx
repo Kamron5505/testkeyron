@@ -10,8 +10,8 @@ import stek6Logo from '../../assets/stek/stek6.svg';
 
 const Stek = () => {
     return (
-        <section className="stack">
-            <div className="container">
+        <section id='stek' className="stack">
+            <div className="container stack__container">
                 <h2 className=" sphers__title title">НАШ СТЕК</h2>
 
                 <div className="stack__tabs">
@@ -22,7 +22,6 @@ const Stek = () => {
                 </div>
 
                 <div className="stack__grid">
-
                     <div className="card card--fastapi">
                         <div className="card__logo">
                             <img src={stek1Logo} alt="FastAPI Logo" />

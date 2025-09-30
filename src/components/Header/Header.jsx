@@ -21,11 +21,11 @@ const Header = () => {
                 </a>
                 <nav className="nav">
                     <ul className="nav__list">
-                        <li className="nav__item"><a href="#" className="nav__link">Сферы</a></li>
-                        <li className="nav__item"><a href="#" className="nav__link">Достижения</a></li>
-                        <li className="nav__item"><a href="#" className="nav__link">Стек технологий</a></li>
-                        <li className="nav__item"><a href="#" className="nav__link">Партнерство</a></li>
-                        <li className="nav__item"><a href="#" className="nav__link">FAQ</a></li>
+                        <li className="nav__item"><a href="#sphers" className="nav__link">Сферы</a></li>
+                        <li className="nav__item"><a href="#achivments" className="nav__link">Достижения</a></li>
+                        <li className="nav__item"><a href="#stek" className="nav__link">Стек технологий</a></li>
+                        <li className="nav__item"><a href="#partners" className="nav__link">Партнерство</a></li>
+                        <li className="nav__item"><a href="#faq" className="nav__link">FAQ</a></li>
                     </ul>
                 </nav>
 

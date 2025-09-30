@@ -1,23 +1,119 @@
-.contact {}
+.contact {
+    padding: 120px 0;
+}
 
-.container {}
 
-.title {}
 
 .contact__title {
     margin-bottom: 50px;
 }
 
-.contact__form-block {}
+.contact__form-block {
+    border-radius: 50px;
+    width: 1140px;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 65px;
+    margin: 0 auto;
+}
+
+
+.portfolio__wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    margin-bottom: 55px;
+}
+
+.portfolio__heading {
+    font-weight: 600;
+    font-size: 32px;
+    color: #fff;
+}
+
+.fade {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeIn 0.6s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 .contact-description {
+    margin: 100px 0;
     font-weight: 700;
     font-size: 32px;
     color: #fff;
 }
 
-.contact-form {}
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 45px;
+}
 
-.contact-form-input {}
+.contact-form-input {
+    padding: 16px 20px;
+    background: #fff;
+    border-radius: 100px;
+    border: none;
+    width: 310px;
+    transition: all 0.3s ease;
+}
 
-.contact-form-button {}
+.contact-form-input::placeholder {
+    font-weight: 400;
+    font-size: 16px;
+    color: #171818;
+    opacity: 0.5;
+    transition: color 0.3s ease;
+}
+
+.contact-form-input {
+    outline: none;
+}
+
+.contact-form-input:hover {
+    background: #f3f3f3;
+}
+
+.contact-form-input:focus {
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(235, 61, 71, 0.4);
+}
+
+.contact-form-button {
+    padding: 16px 40px;
+    background: #EB3D47;
+    color: #fff;
+    border: none;
+    border-radius: 100px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact-form-button:hover {
+    background: #d22f38;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.contact-form-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
