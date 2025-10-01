@@ -2,24 +2,26 @@
     padding: 120px 0;
 }
 
-
-
+/* ===== Title ===== */
 .contact__title {
     margin-bottom: 50px;
 }
 
+/* ===== Form Block ===== */
 .contact__form-block {
-    border-radius: 50px;
     width: 1140px;
+    margin: 0 auto;
+    padding: 60px;
+    border-radius: 50px;
     background: rgba(255, 255, 255, 0.1);
+
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 65px;
-    margin: 0 auto;
 }
 
-    
+/* ===== Fade Animation ===== */
 .fade {
     opacity: 0;
     transform: translateY(10px);
@@ -38,13 +40,14 @@
     }
 }
 
+/* ===== Description ===== */
 .contact-description {
-    margin: 100px 0;
     font-weight: 700;
     font-size: 32px;
     color: #fff;
 }
 
+/* ===== Form ===== */
 .contact-form {
     display: flex;
     flex-direction: column;
@@ -52,25 +55,24 @@
     margin-top: 45px;
 }
 
+/* Inputs */
 .contact-form-input {
-    padding: 16px 20px;
-    background: #fff;
-    border-radius: 100px;
-    border: none;
     width: 310px;
+    padding: 16px 20px;
+    border: none;
+    border-radius: 100px;
+
+    background: #fff;
     transition: all 0.3s ease;
+    outline: none;
 }
 
 .contact-form-input::placeholder {
-    font-weight: 400;
     font-size: 16px;
+    font-weight: 400;
     color: #171818;
     opacity: 0.5;
     transition: color 0.3s ease;
-}
-
-.contact-form-input {
-    outline: none;
 }
 
 .contact-form-input:hover {
@@ -82,14 +84,17 @@
     box-shadow: 0 0 0 3px rgba(235, 61, 71, 0.4);
 }
 
+/* Button */
 .contact-form-button {
     padding: 16px 40px;
-    background: #EB3D47;
-    color: #fff;
     border: none;
     border-radius: 100px;
+
     font-size: 16px;
     font-weight: 500;
+    color: #fff;
+    background: #EB3D47;
+
     cursor: pointer;
     transition: all 0.3s ease;
 }
@@ -103,4 +108,64 @@
 .contact-form-button:active {
     transform: translateY(0);
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.contact__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 480px) {
+    .contact {
+        padding: 40px 0;
+    }
+
+    .contact__title {
+        font-size: 20px;
+    }
+
+    .contact__form-block {
+        flex-direction: column;
+        width: 100%;
+        max-width: 300px;
+        padding: 20px;
+        border-radius: 30px;
+        background: rgba(255, 255, 255, 0.05);
+    }
+
+    .contact-description {
+        font-size: 24px;
+        max-width: 225px;
+        margin-top: 50px;
+        width: 100%;
+    }
+
+
+
+    .contact-form {
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        margin-bottom: 50px;
+    }
+
+    .contact-form input,
+    .contact-form button {
+        width: 225px;
+        padding-left: 20px;
+        font-size: 12px;
+    }
+
+
+    .contact-form button {
+        font-weight: 600;
+        background: #eb3d47;
+        transition: background 0.3s ease;
+    }
+
+    .contact-form button:hover {
+        background: #d6303d;
+    }
 }

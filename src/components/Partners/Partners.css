@@ -61,6 +61,11 @@
 }
 
 @media (max-width:480px) {
+    .partners {
+        padding: 60px 20px;
+        /* общий паддинг для секции */
+    }
+
     .partners__title {
         font-size: 20px;
         margin-bottom: 20px;
@@ -72,13 +77,11 @@
     }
 
     .partners__card {
-        display: flex;
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
         text-align: left;
-        padding: 30px 0;
-        padding-left: 35px;
+        padding: 30px 20px;
     }
 
     .partners__card-title {
@@ -95,6 +98,4 @@
         width: 217px;
         text-align: center;
     }
-
-
 }
