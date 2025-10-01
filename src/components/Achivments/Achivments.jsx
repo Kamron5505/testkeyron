@@ -53,7 +53,7 @@ const AchievementsClean = () => {
     };
 
     return (
-        <section className="achievements-section">
+        <section id='achivments' className="achievements-section">
             <div className="container">
                 <div className="achievements__wrapper">
                     <h2 className="achievements__title title">НАШИ ДОСТИЖЕНИЯ</h2>

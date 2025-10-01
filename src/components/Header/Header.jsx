@@ -55,11 +55,11 @@ const Header = () => {
                             <img src={closeIcon} alt="" />
                         </button>
                         <ul className="modal__list">
-                            <li><a href="#" className="modal__link">Сферы</a></li>
-                            <li><a href="#" className="modal__link">Достижения</a></li>
-                            <li><a href="#" className="modal__link">Стек технологий</a></li>
-                            <li><a href="#" className="modal__link">Партнерство</a></li>
-                            <li><a href="#" className="modal__link">FAQ</a></li>
+                            <li><a href="#sphers" className="modal__link">Сферы</a></li>
+                            <li><a href="#achivments" className="modal__link">Достижения</a></li>
+                            <li><a href="#stek" className="modal__link">Стек технологий</a></li>
+                            <li><a href="#partners" className="modal__link">Партнерство</a></li>
+                            <li><a href="#faq" className="modal__link">FAQ</a></li>
                         </ul>
                         <div className="modal__socials">
                             <a href="#" className="social__link">

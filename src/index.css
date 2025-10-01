@@ -21,10 +21,10 @@ body {
   overflow-x: hidden;
 }
 
-html,
-body {
+html {
   scroll-behavior: smooth;
 }
+
 
 @media (max-width: 768px) {
   body {

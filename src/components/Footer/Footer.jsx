@@ -6,11 +6,11 @@ const Footer = () => {
     return (
         <footer className="footer">
             <div className="container footer__container">
-                <a href="/" className="logo">
-                    <h2 className="logo__text">KEYRON</h2>
+                <a href="/" className="footer__logo">
+                    <h2 className="footer__logo-text">KEYRON</h2>
                 </a>
 
-                <nav className="nav">
+                <nav className="footer__nav">
                     <ul className="nav__list">
                         <li className="nav__item"><a href="#" className="nav__link">Сферы</a></li>
                         <li className="nav__item"><a href="#" className="nav__link">Достижения</a></li>
