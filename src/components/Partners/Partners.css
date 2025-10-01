@@ -63,7 +63,6 @@
 @media (max-width:480px) {
     .partners {
         padding: 60px 20px;
-        /* общий паддинг для секции */
     }
 
     .partners__title {

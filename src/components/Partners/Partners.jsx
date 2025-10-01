@@ -23,7 +23,7 @@ const Partners = () => {
                 <p className="partners__card-description">{description}</p>
             </div>
             <div className="card__button">
-                <button className="partners__card-button button button--primary">Написать мне</button>
+                <a href='#contact' className="partners__card-button">Написать мне</a>
             </div>
         </div>
     );
