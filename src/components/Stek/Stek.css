@@ -1,3 +1,5 @@
+/* ================= Stack Section ================= */
+
 .stack {
     padding: 120px 0;
     display: flex;
@@ -6,9 +8,18 @@
     justify-content: center;
 }
 
-.sphers__title {
+.sphers__title,
+.steks__title {
     margin-bottom: 50px;
 }
+
+.stack__tab.active {
+    background-color: #eb3d47;
+    color: #fff;
+    border: 1px solid #eb3d47;
+}
+
+/* ---------- Tabs ---------- */
 
 .stack__tabs {
     display: flex;
@@ -18,15 +29,54 @@
     flex-wrap: wrap;
 }
 
+.stack__tab {
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    color: #fff;
+    padding: 13px 38px;
+    border-radius: 30px;
+    border: 1px solid #eb3d47;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.stack__tab:hover {
+    background-color: #eb3d47;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+.stack__tab--active {
+    background-color: #eb3d47;
+    color: #fff;
+}
+
+/* ---------- Grid ---------- */
+
+.stack__grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    width: 1164px;
+}
+
+/* ---------- Cards ---------- */
+
 .card {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 31px;
-    width: 360px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    max-width: 360px;
+    width: 100%;
+    height: 245px;
     cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
@@ -35,79 +85,23 @@
     background: rgba(255, 255, 255, 0.15);
 }
 
-.stack__tab-item {
-    font-weight: 400;
-    text-align: center;
-    color: #fff;
-    padding: 13px 38px;
-    border-radius: 30px;
-    border: 1px solid #eb3d47;
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
-
-.stack__tab-item--active {
-    background-color: #eb3d47;
-    color: #fff;
-    border: 1px solid #eb3d47;
-}
-
-.stack__tab-item:hover {
-    background-color: #eb3d47;
-    color: #fff;
-    transform: scale(1.05);
-}
-
-.stack__grid {
-    display: flex;
-    gap: 30px;
-    flex-wrap: wrap;
-    width: 1164px;
-    justify-content: center;
-}
-
-.card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 31px;
-    width: 360px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-    max-width: 305px;
-    width: 100%;
-}
-
+/* Разные отступы для отдельных карточек */
 .card--django {
-    padding-top: 65px;
-    padding-bottom: 25px;
+    padding: 65px 0 25px;
 }
 
 .card--fastapi {
-    padding-top: 40px;
-    padding-bottom: 25px;
+    padding: 40px 0 25px;
 }
 
-.card--flask {
-    padding-top: 50px;
-    padding-bottom: 25px;
-}
-
+.card--flask,
 .card--tornado {
-    padding-top: 50px;
-    padding-bottom: 25px;
+    padding: 50px 0 25px;
 }
 
-.card--aiohttp {
-    padding-top: 40px;
-    padding-bottom: 25px;
-}
-
+.card--aiohttp,
 .card--pyramid {
-    padding-top: 40px;
-    padding-bottom: 25px;
+    padding: 40px 0 25px;
 }
 
 .card__logo img {
@@ -124,30 +118,117 @@
     color: #fff;
 }
 
-.steks__title {
-    margin-bottom: 50px;
+/* ---------- Subtitle ---------- */
+
+.stack__subtitle {
+    text-align: center;
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 30px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
-@media (max-width:480px) {
+.stack__subtitle.fade {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ---------- Wrapper ---------- */
+
+.stack__wrapper {
+    display: none;
+}
+
+/* ================= Mobile ================= */
+
+@media (max-width: 480px) {
+
     .steks__title {
         margin-bottom: 20px;
         font-size: 20px;
-    }
-
-    .card img {
-        display: none;
-    }
-
-    .stack__grid {
-        flex-direction: column;
     }
 
     .stack__tabs {
         display: none;
     }
 
+    .stack__grid {
+        flex-direction: column;
+        width: 303px;
+    }
+
+    .stack__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
     .card {
+        height: 55px;
         padding: 15px 0;
         border-radius: 18px;
+    }
+
+    .card img {
+        display: none;
+    }
+
+    .stacks__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+        margin-bottom: 20px;
+    }
+
+    .stacks__subtitle {
+        font-size: 20px;
+    }
+
+    .stacks__pagination {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+        gap: 30px;
+    }
+
+    .arrow-buttons {
+        display: flex;
+        gap: 10px;
+    }
+
+    .arrow {
+        width: 50px;
+        height: 28px;
+    }
+
+    .indicators {
+        display: flex;
+        gap: 15px;
+    }
+
+    .indicators div {
+        width: 12px;
+        height: 12px;
+    }
+
+    .stack__pagination {
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 25px;
+        margin-top: 15px;
+    }
+
+    .stack__subtitle {
+        font-weight: 600;
+        font-size: 20px;
+        color: #fff;
+        margin-top: 20px;
+        padding-bottom: 30px;
     }
 }
